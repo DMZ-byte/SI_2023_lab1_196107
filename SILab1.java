@@ -14,10 +14,10 @@ public class SILab1 {
     }
 
     private static int sumEvenNumbers(List<Integer> list) {
-        int sum = 1;
+        int sum = 0;
         for (Integer el : list) {
             if (el % 2 == 0) {
-                sum *= el;
+                sum += el;
             }
         }
         return sum;
@@ -30,8 +30,13 @@ public class SILab1 {
 
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 0; i <= n; i++) {
-            list.add(sc.nextInt());
+        try {
+            for (int i = 0; i < n; i++) {
+                list.add(sc.nextInt());
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid input");
+            return;
         }
 
         System.out.println(filterOddNumbers(list));
