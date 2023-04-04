@@ -41,6 +41,10 @@ public class SILab1 {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> bug2
 =======
 
 >>>>>>> bug2
