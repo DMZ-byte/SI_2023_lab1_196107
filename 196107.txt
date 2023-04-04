@@ -1,0 +1,6 @@
+C:\Users\filip>mdir SI_2023_lab1_196107
+C:\Users\filip>cd SI_2023_lab1_196107
+C:\Users\filip\SI_2023_lab1_196107>git init 
+C:\Users\filip\SI_2023_lab1_196107>echo "Filip Domazetovski, 196107" > README.md
+C:\Users\filip\SI_2023_lab1_196107>git add README.md 
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "initial commit"
