@@ -17,14 +17,17 @@ public class SILab1 {
 
 
     private static int sumEvenNumbers(List<Integer> list) {
-        int sum = 1;
+
+        int sum = 0; // initialize sum to 0 instead of 1
         for (Integer el : list) {
             if (el % 2 == 0) {
-                sum *= el;
+                sum += el; // add el to the sum instead of multiplying
+>>>>>>> bug3
             }
         }
         return sum;
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -35,7 +38,7 @@ public class SILab1 {
 
 
         for (int i = 0; i <= n; i++) {
-
+>>>>>>> bug3
             list.add(sc.nextInt());
         }
 
