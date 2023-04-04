@@ -6,7 +6,7 @@ public class SILab1 {
     public static List<Integer> filterOddNumbers(List<Integer> list) {
         List<Integer> result = new ArrayList<>();
         for (Integer el : list) {
-            if (el % 2 == 1) { // filter odd numbers
+            if (el % 2 == 0) {
                 result.add(el);
             }
         }
@@ -14,14 +14,15 @@ public class SILab1 {
     }
 
     private static int sumEvenNumbers(List<Integer> list) {
-        int sum = 0; // initialize sum to 0
+        int sum = 0; // initialize sum to 0 instead of 1
         for (Integer el : list) {
             if (el % 2 == 0) {
-                sum += el; // add even numbers to sum
+                sum += el; // add el to the sum instead of multiplying
             }
         }
         return sum;
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -30,7 +31,7 @@ public class SILab1 {
 
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             list.add(sc.nextInt());
         }
 
@@ -39,4 +40,3 @@ public class SILab1 {
         System.out.println(sumEvenNumbers(list));
     }
 }
-
