@@ -1,0 +1,702 @@
+
+C:\Users\filip>cd SI_2023_lab1_196107
+
+C:\Users\filip\SI_2023_lab1_196107>git init
+Reinitialized existing Git repository in C:/Users/filip/SI_2023_lab1_196107/.git/
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch bug1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        196107.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+error: The following untracked working tree files would be overwritten by checkout:
+        196107.txt
+Please move or remove them before you switch branches.
+Aborting
+
+C:\Users\filip\SI_2023_lab1_196107>git add 196107.txt
+
+C:\Users\filip\SI_2023_lab1_196107>git commit 196107.txt
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "documentation" 196107.txt
+[bug1 0bb4f19] documentation
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 196107.txt
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git branch bug2
+
+C:\Users\filip\SI_2023_lab1_196107>git swtich bug2
+git: 'swtich' is not a git command. See 'git --help'.
+
+The most similar command is
+        switch
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+Switched to branch 'bug2'
+
+C:\Users\filip\SI_2023_lab1_196107>git swtich master
+git: 'swtich' is not a git command. See 'git --help'.
+
+The most similar command is
+        switch
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>dir
+ Volume in drive C has no label.
+ Volume Serial Number is BE07-EEC0
+
+ Directory of C:\Users\filip\SI_2023_lab1_196107
+
+04/04/2023  02:16 PM    <DIR>          .
+04/04/2023  02:16 PM    <DIR>          ..
+04/04/2023  12:14 AM                 0 196107.txt
+04/03/2023  12:14 PM                32 README.md
+04/04/2023  02:16 PM             1,146 SILab1.java
+               3 File(s)          1,178 bytes
+               2 Dir(s)  228,214,099,968 bytes free
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+Switched to branch 'bug2'
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "bug2 fix" SILab1.java
+[bug2 e8b4cc6] bug2 fix
+ 1 file changed, 7 insertions(+), 10 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git branch bug3
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug3
+Switched to branch 'bug3'
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "bug3 fix" SILab.java
+error: pathspec 'SILab.java' did not match any file(s) known to git
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "bug3 fix" SILab1.java
+On branch bug3
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "bug3 fix" SILab1.java
+[bug3 f9797d7] bug3 fix
+ 1 file changed, 6 insertions(+), 10 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 720 bytes | 720.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/DMZ-byte/SI_2023_lab1_196107.git
+   fed0424..e6902bc  master -> master
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch --all
+Fetching origin
+Fetching README.md
+fatal: no path specified; see 'git help pull' for valid url syntax
+error: could not fetch README.md
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug1
+Merge made by the 'ort' strategy.
+ SILab1.java | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git pull --all
+Fetching origin
+Fetching README.md
+fatal: no path specified; see 'git help pull' for valid url syntax
+error: could not fetch README.md
+
+C:\Users\filip\SI_2023_lab1_196107>git pull https://github.com/DMZ-byte/SI_2023_lab1_196107.git
+From https://github.com/DMZ-byte/SI_2023_lab1_196107
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git pull origin main
+fatal: couldn't find remote ref main
+
+C:\Users\filip\SI_2023_lab1_196107>git pull origin master
+From https://github.com/DMZ-byte/SI_2023_lab1_196107
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git pull --all
+Fetching origin
+Fetching README.md
+fatal: no path specified; see 'git help pull' for valid url syntax
+error: could not fetch README.md
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch --all
+Fetching origin
+Fetching README.md
+fatal: no path specified; see 'git help pull' for valid url syntax
+error: could not fetch README.md
+
+C:\Users\filip\SI_2023_lab1_196107>git help pull
+
+C:\Users\filip\SI_2023_lab1_196107>git push origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (14/14), 1.79 KiB | 1.79 MiB/s, done.
+Total 14 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/DMZ-byte/SI_2023_lab1_196107.git
+   e6902bc..5f22756  master -> master
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+Switched to branch 'bug2'
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug 2
+merge: bug - not something we can merge
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug3
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\filip\SI_2023_lab1_196107>git rebase master
+SILab1.java: needs merge
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit SILab1.java
+fatal: cannot do a partial commit during a merge.
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "fix" SILab1.java
+fatal: cannot do a partial commit during a merge.
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+fatal: cannot switch branch while merging
+Consider "git merge --quit" or "git worktree add".
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quit
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+error: Your local changes to the following files would be overwritten by checkout:
+        SILab1.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "fix" SILab1.java
+[master f039ec7] fix
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug3
+Switched to branch 'bug3'
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch bug3
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug1
+Switched to branch 'bug1'
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch bug1
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug3
+Switched to branch 'bug3'
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch bug3
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+Switched to branch 'bug2'
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch bug2
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git checkout bug1
+error: you need to resolve your current index first
+SILab1.java: needs merge
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quite
+error: unknown option `quite'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quit
+
+C:\Users\filip\SI_2023_lab1_196107>git checkout bug1
+error: you need to resolve your current index first
+SILab1.java: needs merge
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\filip\SI_2023_lab1_196107>git add SI_Lab1.java
+fatal: pathspec 'SI_Lab1.java' did not match any files
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>got commmit -m "fix" SILab1.java
+'got' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\filip\SI_2023_lab1_196107>git commmit -m "fix" SILab1.java
+git: 'commmit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "fix" SILab1.java
+[master f43738b] fix
+ 1 file changed, 4 insertions(+)
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug1
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+fatal: cannot switch branch while merging
+Consider "git merge --quit" or "git worktree add".
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab.java
+fatal: pathspec 'SILab.java' did not match any files
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "fix" SILab1.java
+fatal: cannot do a partial commit during a merge.
+
+C:\Users\filip\SI_2023_lab1_196107>git  status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   SILab1.java
+
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quite
+error: unknown option `quite'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quit
+
+C:\Users\filip\SI_2023_lab1_196107>git commit
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "merge"
+[master 375e423] merge
+ 1 file changed, 8 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+fatal: cannot switch branch while merging
+Consider "git merge --quit" or "git worktree add".
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quit
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+error: you need to resolve your current index first
+SILab1.java: needs merge
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m
+error: switch `m' requires a value
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "m"
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+error: you need to resolve your current index first
+SILab1.java: needs merge
+
+C:\Users\filip\SI_2023_lab1_196107>git merge --quit
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+error: you need to resolve your current index first
+SILab1.java: needs merge
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\filip\SI_2023_lab1_196107>git restore --staged SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+error: Your local changes to the following files would be overwritten by checkout:
+        SILab1.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+C:\Users\filip\SI_2023_lab1_196107>git stash
+Saved working directory and index state WIP on master: 375e423 merge
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug2
+Switched to branch 'bug2'
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "а Fix wrong condition in filterOddNumbers" SILab1.java
+On branch bug2
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "а Fix wrong condition in filterOddNumbers" SILab1.java
+On branch bug2
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "а Fix wrong condition in filterOddNumbers" SILab1.java
+[bug2 21648ed] а Fix wrong condition in filterOddNumbers
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug3
+Switched to branch 'bug3'
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m " Fix method sumEvenNumbers" SILab1.java
+[bug3 c19abf8]  Fix method sumEvenNumbers
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch -all
+error: did you mean `--all` (with two dashes)?
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch --all
+Fetching origin
+Fetching README.md
+fatal: no path specified; see 'git help pull' for valid url syntax
+error: could not fetch README.md
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch origin main
+fatal: couldn't find remote ref main
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch origin master
+From https://github.com/DMZ-byte/SI_2023_lab1_196107
+ * branch            master     -> FETCH_HEAD
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug1
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+C:\Users\filip\SI_2023_lab1_196107>git add SI.Lab1.java
+fatal: pathspec 'SI.Lab1.java' did not match any files
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git git commit
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+C:\Users\filip\SI_2023_lab1_196107>git commit
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "Conflicts resolved"
+[master bc58c54] Conflicts resolved
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug2
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug3
+Auto-merging SILab1.java
+CONFLICT (content): Merge conflict in SILab1.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\filip\SI_2023_lab1_196107>git add SILab1.java
+
+C:\Users\filip\SI_2023_lab1_196107>git commit -m "Resolved conflicts bug3"
+[master f42eee9] Resolved conflicts bug3
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug3
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch origin mastert
+fatal: couldn't find remote ref mastert
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch origin master
+From https://github.com/DMZ-byte/SI_2023_lab1_196107
+ * branch            master     -> FETCH_HEAD
+
+C:\Users\filip\SI_2023_lab1_196107>git rebase master
+Current branch master is up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git switch bug3
+Switched to branch 'bug3'
+
+C:\Users\filip\SI_2023_lab1_196107>git rebase master
+Successfully rebased and updated refs/heads/bug3.
+
+C:\Users\filip\SI_2023_lab1_196107>switch branch master
+'switch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\filip\SI_2023_lab1_196107>git switch master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 9 commits.
+  (use "git push" to publish your local commits)
+
+C:\Users\filip\SI_2023_lab1_196107>git merge bug3
+Already up to date.
+
+C:\Users\filip\SI_2023_lab1_196107>git commit
+On branch master
+Your branch is ahead of 'origin/master' by 9 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git status
+On branch master
+Your branch is ahead of 'origin/master' by 9 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\filip\SI_2023_lab1_196107>git push
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (27/27), 2.57 KiB | 1.28 MiB/s, done.
+Total 27 (delta 19), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (19/19), completed with 2 local objects.
+To https://github.com/DMZ-byte/SI_2023_lab1_196107.git
+   5f22756..f42eee9  master -> master
+
+C:\Users\filip\SI_2023_lab1_196107>git fetch origin master
+From https://github.com/DMZ-byte/SI_2023_lab1_196107
+ * branch            master     -> FETCH_HEAD
+
+C:\Users\filip\SI_2023_lab1_196107>
